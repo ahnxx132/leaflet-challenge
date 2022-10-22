@@ -15,7 +15,7 @@ The instructions for this activity are broken into two parts:
 
 * **Part 1: Create the Earthquake Visualization**
 
-* Part 2: Gather and Plot More Data (Optional) -I skipped this since its Optional
+* Part 2: Gather and Plot More Data (Optional) -I skipped this since it is Optional
 
 ### Part 1: Create the Earthquake Visualization
 
