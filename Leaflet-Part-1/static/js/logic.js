@@ -3,37 +3,6 @@
 const eqURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 
-// Determine sizes for each markers on the map
-function size(magnitude) {
-    return magnitude * 25000;
-  }
-  
-  // assigning color functions on magnitude of the earthquakes.
-  function colors(magnitude) {
-    let color = "";
-    if (magnitude <= 10) {
-      return color = "#6ae809";
-    }
-    else if (magnitude <= 30) {
-      return color = "#d0ff00";
-    }
-    else if (magnitude <= 50) {
-      return color = "#eaff00";
-    }
-    else if (magnitude <= 70) {
-      return color = "#ffd000";
-    }
-    else if (magnitude <= 90) {
-      return color = "#e84a0e";
-    }
-    else if (magnitude > 90) {
-      return color = "#cc0404";
-    }
-    else {
-      return color = "#ff00bf";
-    }
-  }
-
     // d3-read data and show me all the features objects
   d3.json(eqURL, function (data) {
     console.log(data);
@@ -73,9 +42,36 @@ function size(magnitude) {
     
   });
 
+  // assigning color functions on magnitude of the earthquakes.
+  function colors(magnitude) {
+    if (magnitude <= 10) {
+      return color = "#6ae809";
+    }
+    else if (magnitude <= 30) {
+      return color = "#d0ff00";
+    }
+    else if (magnitude <= 50) {
+      return color = "#eaff00";
+    }
+    else if (magnitude <= 70) {
+      return color = "#ffd000";
+    }
+    else if (magnitude <= 90) {
+      return color = "#e84a0e";
+    }
+    else if (magnitude > 90) {
+      return color = "#cc0404";
+    }
+    else {
+      return color = "#ff00bf";
+    }
+  }
+  
+  // Determine sizes for each markers on the map
+function size(magnitude) {
+  return magnitude * 25000;
+}
 
-  
-  
     // Create overarching function for earthquake map
   function createMap(earthquakes) {
   
